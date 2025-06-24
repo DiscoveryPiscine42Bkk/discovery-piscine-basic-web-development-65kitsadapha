@@ -2,6 +2,9 @@
 <html>
 <head>
     <style>
+        div {
+            padding: 20px;
+        }
         body {background-color: palevioletred;}
 
         #kp {text-align: center;
@@ -10,6 +13,10 @@
 
         #ip {font-family: monospace;
                 text-align: right;}
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;}        
 
     </style>
 
@@ -18,18 +25,23 @@
 </head>
 <body> 
     <h1 id="kp"> Basics! </h1>
-    <img src="img/archita.jpg"
-    width="1000"
-    height="auto">
-    <img src="img/brunch.jpg"
-    width="1000"
-    height="auto">
-<br>
-        <a href="https://architaofficial.com/shop/?fbclid=IwY2xjawLHWudleHRuA2FlbQIxMABicmlkETB0MWtEZ01vZzR3Qk5kc1ZWAR4dp7QVm-Khaa4n-hjWBKGXeEEJqtRW7hi_Hs1mnrHSKT1fep26VD4YUB3hyw_aem_rcj-I2ntiaUaSKUsIGJwiQ" 
-        target="_blank">Archita Shop</a>
-    
-        <a href="https://www.brunchtimeshop.com/en/products?tags=2&fbclid=IwY2xjawLHW9NleHRuA2FlbQIxMABicmlkETB0MWtEZ01vZzR3Qk5kc1ZWAR5Lfz1Dc6jo8WkNjp8RV7-SHVJVpdKIu6RlFIwQvWLtXtYIyS37CEygqDnswQ_aem_iFaB9KTINYiTzFaat4KN_w" 
-        target="_blank">Brunchtime Shop</a>    
+    <div class="container">
+
+        <div><img src="img/archita.jpg"
+            width="600"
+            height="auto">
+            <br><a href="https://architaofficial.com/shop/?fbclid=IwY2xjawLHWudleHRuA2FlbQIxMABicmlkETB0MWtEZ01vZzR3Qk5kc1ZWAR4dp7QVm-Khaa4n-hjWBKGXeEEJqtRW7hi_Hs1mnrHSKT1fep26VD4YUB3hyw_aem_rcj-I2ntiaUaSKUsIGJwiQ" 
+            target="_blank">Archita Shop</a>
+        </div> 
+
+        <div><img src="img/brunch.jpg"
+            width="600"
+            height="auto">  
+            <br><a href="https://www.brunchtimeshop.com/en/products?tags=2&fbclid=IwY2xjawLHW9NleHRuA2FlbQIxMABicmlkETB0MWtEZ01vZzR3Qk5kc1ZWAR5Lfz1Dc6jo8WkNjp8RV7-SHVJVpdKIu6RlFIwQvWLtXtYIyS37CEygqDnswQ_aem_iFaB9KTINYiTzFaat4KN_w" 
+            target="_blank">Brunchtime Shop</a>
+        </div>
+
+    </div>        
 
 <hr>
 
