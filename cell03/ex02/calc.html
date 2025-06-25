@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top:200px;
+        }
+        input, select {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="left" placeholder="Left operand">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="right" placeholder="Right operand">
+    <button onclick="calculate()">Try me!</button>
+
+    <script>
+        function calculate() {
+            const left = document.getElementById('left').value.trim();
+            const right = document.getElementById('right').value.trim();
+            const operator = document.getElementById('operator').value;
+
+            // เช็คว่าเป็นจำนวนเต็มบวก
+            if (!/^\d+$/.test(left) || !/^\d+$/.test(right)) {
+                alert('Error :(');
+                return;
+            }
+
+            const a = parseInt(left);
+            const b = parseInt(right);
+
+            // หารหรือ mod ด้วยศูนย์
+            if ((operator === '/' || operator === '%') && b === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            let result;
+            switch (operator) {
+                case '+': result = a + b; break;
+                case '-': result = a - b; break;
+                case '*': result = a * b; break;
+                case '/': result = a / b; break;
+                case '%': result = a % b; break;
+            }
+
+            alert(result);
+            console.log(result);
+        }
+
+        // Every 30 seconds → alert
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+
+</body>
+</html>
