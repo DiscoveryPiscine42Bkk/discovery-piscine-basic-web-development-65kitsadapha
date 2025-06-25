@@ -21,11 +21,11 @@ body, html {
 }
 
 .parallax1 {
-    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); 
+    background-image: url('natural1.jpg'); 
 }
 
 .parallax2 {
-    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-image: url('natural2.jpg');
 }
 
 .content {
