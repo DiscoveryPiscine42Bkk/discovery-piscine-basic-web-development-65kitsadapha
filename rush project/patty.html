@@ -1,0 +1,334 @@
+<!DOCTYPE html> 
+<html lang="en"> <!-- กำหนดภาษาหลักเป็น English -->
+
+<head> <!-- ส่วนหัวของเอกสาร HTML -->
+    <meta charset="UTF-8"> <!-- กำหนดการเข้ารหัสตัวอักษรเป็น UTF-8 (รองรับภาษาไทย อังกฤษ ฯลฯ) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ทำให้หน้าเว็บ responsive ปรับขนาดตามหน้าจอ -->
+    <title>My Portfolio</title> <!-- ชื่อแท็บเว็บบน browser -->
+    <link rel="stylesheet" href="rush.css"> <!-- เชื่อมไฟล์ CSS ภายนอกสำหรับปรับแต่งเว็บ -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- ดึง CSS จาก Bootstrap ผ่าน CDN เพื่อใช้ class สำเร็จรูป -->
+
+</head>
+    <!-- Bootstrap 4.5.2 dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+<body> <!-- เริ่มต้นส่วนเนื้อหาหลักของเว็บ -->
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top"> <!-- เริ่ม nav bar ใช้ class Bootstrap และ class ที่ custom เอง -->
+        <div class="container"> <!-- ครอบให้เนื้อหาใน nav อยู่กึ่งกลางขนาด container -->
+            <a class="navbar-brand" href="#">My Portfolio</a> <!-- โลโก้หรือชื่อเว็บทางซ้ายมือ กดแล้วไปหน้าแรก (href="#") -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"> <!-- ปุ่ม hamburger menu (สำหรับหน้าจอเล็ก) -->
+                <span class="navbar-toggler-icon"></span> <!-- ไอคอน hamburger -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav"> <!-- ส่วนเมนูที่จะพับ/ขยายเมื่อคลิก hamburger -->
+                <ul class="navbar-nav ml-auto"> <!-- เริ่มรายการเมนู nav (ลอยไปฝั่งขวาด้วย ml-auto) -->
+
+                    <!-- New Home Link -->
+                    <li class="nav-item"> <!-- รายการเมนู 1 ตัว -->
+                        <a class="nav-link" href="card.html">Home</a> <!-- ลิงก์ไปที่หน้า card.html -->
+                    </li>
+
+                    <li class="nav-item"> <!-- เมนู About Me -->
+                        <a class="nav-link" href="#about">About Me</a> <!-- ลิงก์แบบ anchor jump ไป section id="about" -->
+                    </li>
+
+                    <li class="nav-item"> <!-- เมนู Showcase -->
+                        <a class="nav-link" href="#showcase">Showcase</a> <!-- ลิงก์ anchor jump ไป section id="showcase" -->
+                    </li>
+
+                    <li class="nav-item"> <!-- เมนู Contact -->
+                        <a class="nav-link" href="#contact">Contact</a> <!-- ลิงก์ anchor jump ไป section id="contact" -->
+                    </li>
+
+                </ul> <!-- ปิด ul เมนูทั้งหมด -->
+            </div> <!-- ปิด div collapse -->
+        </div> <!-- ปิด container -->
+    </nav> <!-- ปิด nav bar -->
+
+
+<!-- About Me Section -->
+<section id="about" class="section"> <!-- เริ่ม Section About Me โดยมี id="about" ไว้ลิงก์จาก navbar -->
+    <div class="container"> <!-- ครอบ section ทั้งหมดให้อยู่ตรงกลาง (Bootstrap ใช้จัดความกว้างให้อยู่กลางจอ) -->
+        <h2>About Me</h2> <!-- หัวข้อหลักของ Section -->
+
+        <div class="row align-items-center"> <!-- เริ่มแถว Bootstrap (Grid system) + จัดให้เนื้อหาแนวดิ่งตรงกลาง -->
+
+            <!-- รูปภาพด้านซ้าย -->
+            <div class="col-md-4 text-center"> <!-- กำหนดความกว้าง 4/12 ช่อง สำหรับหน้าจอกลางขึ้นไป และจัดรูปภาพให้อยู่ตรงกลางแนวนอน -->
+                <img src="Patty.jpg" alt="My Photo" class="img-fluid profile-img"> <!-- รูปภาพโปรไฟล์ ปรับ responsive ด้วย img-fluid -->
+            </div>
+
+            <!-- ข้อความด้านขวา -->
+            <div class="col-md-8"> <!-- อีกฝั่ง (8/12 ช่อง) เอาไว้ใส่ข้อความ -->
+                <p><i></i> <strong>Name:</strong> Kitsadapha Rungthanacharoen</p> <!-- ชื่อ -->
+                <p><i></i> <strong>Education:</strong></p> <!-- หัวข้อ Education -->
+
+                <ul> <!-- เริ่มลิสต์รายการการศึกษา -->
+                    <li><i></i> High School: Assumption College Sriracha</li> <!-- มัธยมปลาย -->
+                    <li><i></i> University: King Mongkut's Institute of Technology Ladkrabang</li> <!-- มหาวิทยาลัย -->
+                </ul>
+
+                <p><i></i> <strong>Talent:</strong> SEO, SEM</p> <!-- ความสามารถพิเศษ -->
+                <p><i></i> <strong>Career:</strong> Digital Marketing</p> <!-- อาชีพที่สนใจ -->
+                <p><i></i> <strong>City:</strong> Bangkok, Thailand</p> <!-- เมือง -->
+            </div> <!-- ปิด col ข้อความด้านขวา -->
+
+        </div> <!-- ปิด row -->
+
+    </div> <!-- ปิด container -->
+</section> <!-- ปิด Section About -->
+
+
+<!-- Skill Section -->
+<section id="skills" class="section skills-section">   <!-- เริ่มต้น Section แสดงทักษะ กำหนด id="skills" และ class เพื่อใช้กับ CSS -->
+    <div class="container">                            <!-- Container ช่วยกำหนดความกว้างและจัดเนื้อหาให้อยู่ตรงกลาง -->
+        <h2>Skills</h2>                                <!-- หัวข้อหลักของ Section คือ "Skills" -->
+
+        <!-- ทักษะ HTML -->
+        <div class="skill">                            <!-- เริ่มต้นกล่องแสดงทักษะ 1 รายการ -->
+            <div class="skill-header">                 <!-- ส่วนหัวของทักษะ เช่น ชื่อทักษะและเปอร์เซ็นต์ -->
+                <span>HTML</span>                      <!-- ชื่อทักษะ HTML -->
+                <span class="skill-percent">100%</span> <!-- เปอร์เซ็นต์ความสามารถใน HTML -->
+            </div>
+            <div class="skill-bar">                    <!-- กล่อง bar ที่เป็นพื้นหลังของแถบความสามารถ -->
+                <div class="skill-fill" style="width: 100%;"></div>  <!-- แถบสีแสดงเปอร์เซ็นต์ความสามารถ ความกว้าง 100% -->
+            </div>
+        </div>
+
+        <!-- ทักษะ CSS -->
+        <div class="skill">                            
+            <div class="skill-header">                 
+                <span>CSS</span>                       
+                <span class="skill-percent">90%</span> 
+            </div>
+            <div class="skill-bar">                    
+                <div class="skill-fill" style="width: 90%;"></div>    
+            </div>
+        </div>
+
+        <!-- ทักษะ JavaScript -->
+        <div class="skill">                            
+            <div class="skill-header">                 
+                <span>JavaScript</span>                
+                <span class="skill-percent">75%</span> 
+            </div>
+            <div class="skill-bar">                    
+                <div class="skill-fill" style="width: 75%;"></div>    
+            </div>
+        </div>
+
+        <!-- ทักษะ PHP -->
+        <div class="skill">                            
+            <div class="skill-header">                 
+                <span>PHP</span>                       
+                <span class="skill-percent">80%</span> 
+            </div>
+            <div class="skill-bar">                    
+                <div class="skill-fill" style="width: 80%;"></div>    
+            </div>
+        </div>
+
+        <!-- ทักษะ WordPress/CMS -->
+        <div class="skill">                            
+            <div class="skill-header">                 
+                <span>WordPress/CMS</span>             
+                <span class="skill-percent">90%</span> 
+            </div>
+            <div class="skill-bar">                    
+                <div class="skill-fill" style="width: 90%;"></div>    
+            </div>
+        </div>
+
+        <!-- ทักษะ Photoshop -->
+        <div class="skill">                            
+            <div class="skill-header">                 
+                <span>Photoshop</span>                 
+                <span class="skill-percent">55%</span> 
+            </div>
+            <div class="skill-bar">                    
+                <div class="skill-fill" style="width: 55%;"></div>    
+            </div>
+        </div>
+
+    </div> <!-- ปิด container -->
+</section> <!-- ปิด section skills -->
+
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="section showcase-bg">
+    
+        <!-- Container ของ Bootstrap สำหรับจัดขอบและจัด layout กลาง -->
+        <div class="container">
+            
+            <!-- หัวข้อหลักของ section -->
+            <h2>Showcase</h2>
+    
+            <!-- แถว (row) ของ Bootstrap สำหรับแบ่งคอลัมน์ -->
+            <div class="row">
+                
+                <!-- คอลัมน์ซ้ายขนาด 6/12 บนหน้าจอขนาด medium ขึ้นไป -->
+                <div class="col-md-6">
+    
+                    <!-- กล่องย่อย: ประสบการณ์ทำงาน -->
+                    <div class="timeline-item">
+                        <h4>Work Experience</h4>
+                        <p><strong>April 2025 - Present:</strong> Marketing Internship at True Corporation Public Company Limited (TRUE) </p>
+                        <p><strong>2024 - 2023:</strong> Marketing at Bcampus Official</p>
+                        <p><strong>2023 - 2022:</strong> Sale Assistance at Longchamp Siam Premium Outlet</p>
+                    </div>
+    
+                    <!-- กล่องย่อย: ทักษะ -->
+                    <div class="timeline-item">
+                        <h4>Skills</h4>
+                        <ul>
+                            <li>HTML / CSS / JavaScript</li>
+                            <li>Data Analytics</li>
+                            <li>Graphic Design</li>
+                            <li>Investment Consultant</li>
+                            <li>Digital Marketing</li>
+                        </ul>
+                    </div>
+    
+                    <!-- กล่องย่อย: รางวัลที่ได้รับ -->
+                    <div class="timeline-item">
+                        <h4>Awards</h4>
+                        <ul>
+                            <li>Best Design Award 2022</li>
+                            <li>Hackathon Winner 2021</li>
+                            <li>Honorable Mention in the Poster and Brochure Design Competition</li>
+                        </ul>
+                    </div>
+                 
+                    <!-- กล่องย่อย: กิจกรรมที่เข้าร่วม -->
+                    <div class="timeline-item">
+                        <h4>Activities</h4>
+                        <ul>
+                            <li>Volunteer at Kmitl Youth for Next Step Club</li>
+                            <li>University Smo Club Member</li>
+                            <li>CP Boost Camp , in 2023 and 2024.</li>
+                            <li>Staff Escort of Business seminar at MCC hall The Mall Lifestore Bangkapi</li>
+                            <li>Staff Organize Activity, The 3 King Mongkut's Volunteers Camp at Wat Chatthong School</li>
+                            <li>Secretary for organizing the freshman orientation event for first-year Economics students in 2023</li>
+                            <li>Nursing Team, "Khae Saet Samphan" Sports Event, 2022</li>
+                        </ul>
+                    </div>
+    
+                    <!-- กล่องย่อย: ใบรับรอง -->
+                    <div class="timeline-item">
+                        <h4>Certificates</h4>
+                        
+                        <!-- รายการหลักของใบรับรอง -->
+                        <ul class="certificate-list">
+                            
+                            <!-- ใบรับรองจาก ATI-ASCO -->
+                            <li>ATI-ASCO Training Institute
+                                <ul>
+                                    <li>Investment Consultant (P1)</li>
+                                </ul>
+                            </li>
+                            
+                            <!-- ใบรับรองจาก True Digital Academy -->
+                            <li>Certificate from True Digital Academy
+                                <ul>
+                                    <li>Digital Marketing Kickstarter course</li>
+                                    <li>Data Analytics Foundation course</li>
+                                </ul>
+                            </li>
+                            
+                            <!-- ใบรับรองจาก SET e-learning -->
+                            <li>Certificate from SET e-learning for AISA
+                                <ul>
+                                    <li>Financial Statement Analysis</li>
+                                    <li>Corporate Finance</li>
+                                    <li>Principle Of Investment</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> <!-- จบ timeline-item ของ Certificates -->
+    
+                </div> <!-- จบ col-md-6 -->
+            
+            </div> <!-- จบ row -->
+        
+        </div> <!-- จบ container -->
+    
+    </section> <!-- จบ section showcase -->
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+    
+        <!-- Container ของ Bootstrap: จัดระยะขอบและให้อยู่ตรงกลาง -->
+        <div class="container">
+            
+            <!-- หัวข้อหลักของ section -->
+            <h2>Contact</h2>
+    
+            <!-- กล่องรวมเนื้อหาติดต่อ: ใส่กรอบ/สีพื้นตาม CSS -->
+            <div class="contact-content">
+    
+                <br> <!-- เว้นบรรทัดให้มีช่องว่าง -->
+    
+                <!-- กล่องแสดงเบอร์โทรศัพท์ -->
+                <div class="contact-icon">
+                    <img src="https://cdn4.iconfinder.com/data/icons/social-media-2097/94/phone-512.png" alt="Phone"> <!-- ไอคอนโทรศัพท์ -->
+                    <span>+66 1234 56789</span> <!-- ข้อความแสดงเบอร์โทร -->
+                </div>
+    
+                <br> <!-- เว้นบรรทัด -->
+    
+                <!-- กล่องแสดงอีเมล -->
+                <div class="contact-icon">
+                    <!-- ไอคอน Gmail -->
+                    <img src="https://freepnglogo.com/images/all_img/gmail-icon-2020-0631.png" alt="Gmail">
+                    <!-- ข้อความอีเมล -->
+                    <span>kitsadapha.rung@gmail.com</span>
+                </div>
+    
+                <br> <!-- เว้นบรรทัด -->
+    
+                <!-- ลิงก์ไป Instagram -->
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fpat_ty_kazumi%3Figsh%3DcjIwNHM1aG9majF6%26utm_source%3Dqr%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExeWNRY0dlRVVRVHdYM3p3agEe20goO0zkSI8OEG5Zbx-lb8pLMkpqQG0kkAvOtbx2y_99wcjmyAnWCDx2qz4_aem_6cppX5uM8xhhMGXE7XBBAA&h=AT0XTb4hpwWBmJ81wNTvLBoPRE5sY3gHtaKlAHqxtYrld_JW0Kvz9zJlpCoMCDUEnpVOcLdvtj_DphJsqztRrmyFqaPkeTOY2FLgb_q4b5r-KwYmMgi_6oUsKoBJdw"" target="_blank" class="contact-icon"> 
+                    <!-- ไอคอน Instagram -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/500px-Instagram-Icon.png">    
+                </a>
+    
+                <!-- ลิงก์ไป GitHub -->
+                <a href="https://github.com/DiscoveryPiscine42Bkk/discovery-piscine-basic-web-development-65kitsadapha.git" target="_blank" class="contact-icon"> 
+                    <!-- ไอคอน GitHub -->
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png">            
+                </a>
+    
+                <!-- ลิงก์ไป Line -->
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fline.me%2Fti%2Fp%2FzeNDBZqD67%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExeWNRY0dlRVVRVHdYM3p3agEeynYt4AvV01Ws1G1ILjTgC2Kx2_f0Yk3PF5zTucC5U3zCj-QHz4iyOKdDrm8_aem_uumvY5IaUvHG1hnzoYMMQA&h=AT0XTb4hpwWBmJ81wNTvLBoPRE5sY3gHtaKlAHqxtYrld_JW0Kvz9zJlpCoMCDUEnpVOcLdvtj_DphJsqztRrmyFqaPkeTOY2FLgb_q4b5r-KwYmMgi_6oUsKoBJdw" target="_blank" class="contact-icon">
+                    <!-- ไอคอน Line -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/LINE_New_App_Icon_%282020-12%29.png">
+                </a>
+    
+             <!-- ลิงก์ไป Discord -->
+             <a href="https://discordapp.com/users/yourdiscordid" target="_blank" class="contact-icon">
+                <!-- ไอคอน Discord -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png">
+            </a>
+
+            <!-- ลิงก์ไป Facebook -->
+            <a href="https://www.facebook.com/vs.da.pha.rung.thna.ceriy/" target="_blank" class="contact-icon">
+                <!-- ไอคอน Facebook -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/500px-Facebook_Logo_%282019%29.png">
+            </a>
+
+        </div> <!-- จบกล่อง contact-content -->
+
+    </div> <!-- จบ container -->
+
+</section> <!-- จบ Section Contact -->
+                
+</body>
+                
+</html>
