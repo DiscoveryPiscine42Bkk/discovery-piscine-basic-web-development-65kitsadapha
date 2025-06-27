@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Portfolio</title>
+  <style>
+    body {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+        url('https://www.realestate.com.au/news-image/w_2000,h_1500/v1657825043/news-lifestyle-content-assets/wp-content/production/Charry-blossoms-hero.jpg?_i=AA');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Lato', sans-serif;
+      padding-top: 100px;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;               /* ✅ ให้ wrap เวลาจอเล็ก */
+      justify-content: center;       /* ✅ Center แนวนอน */
+      align-items: center;           /* ✅ Center แนวตั้งในกรณี row เดียว */
+      max-width: 1200px;
+      margin: 0 auto;                /* ✅ Center ทั้ง container */
+      padding: 10px;
+    }
+
+    .port {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;            /* ✅ ให้ข้อความในกล่องตรงกลาง */
+      flex: 1 1 300px;               /* ✅ ยืดหยุ่นตั้งแต่ 300px */
+      max-width: 400px;              /* ✅ ไม่เกิน 400px */
+      margin: 20px;                  /* ✅ ระยะห่างระหว่างกล่อง */
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .port:hover {
+      transform: translateY(-5px);
+    }
+
+    .port img {
+      width: 100%;                   /* ✅ รูปเต็ม container */
+      height: auto;                  /* ✅ ป้องกันบิด */
+      border-radius: 10px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;                /* ✅ Center รูป (ถ้ากำหนด width เป็น fixed ในอนาคต) */
+    }
+
+    .rounded-box {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: 2px solid white;
+      border-radius: 30px;
+      background-color: #ff69a5;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      word-wrap: break-word;
+    }
+
+    .rounded-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Portfolio</h1>
+
+  <div class="container">
+    <div class="port">
+      <img src="patty.png" alt="Patty">
+      <a href="patty.html" target="_blank" class="rounded-box">Kitsadapha Rungthanacharoen</a>
+    </div>
+
+    <div class="port">
+      <img src="fah.png" alt="Fah">
+      <a href="fah.html" target="_blank" class="rounded-box">Chanakarn Srichowna</a>
+    </div>
+  </div>
+
+</body>
+</html>

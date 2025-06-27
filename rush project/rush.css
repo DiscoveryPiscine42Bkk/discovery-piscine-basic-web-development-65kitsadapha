@@ -215,6 +215,7 @@ h2 {
     font-size: 40px;                /* ขนาดฟอนต์ (มีผลกับ text ถ้าใช้) */
 }
 
+
 .contact-icon img {             /* รูปภาพใน contact-icon */
     width: 40px;                    /* ความกว้างรูป 40px */
     height: 40px;                   /* ความสูงรูป 40px */
